@@ -1,0 +1,70 @@
+.clocks-tracks-track {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+    vertical-align: bottom;
+}
+
+.clocks-tracks-track-btn {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--text-normal);
+    border-radius: var(--radius-s);
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    padding: 0;
+    margin: 0;
+}
+
+.clocks-tracks-track-btn:hover {
+    border-color: var(--interactive-accent);
+}
+
+.clocks-tracks-track-btn.active {
+    border-color: var(--interactive-accent);
+    background-color: var(--interactive-accent);
+}
+
+.clocks-tracks-track-circles {
+    border-radius: 50%;
+}
+
+.clocks-tracks-clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    vertical-align: bottom;
+}
+
+.clocks-tracks-clock-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+.clocks-tracks-clock-svg {
+    cursor: pointer;
+}
+
+.clocks-tracks-clock-svg circle,
+.clocks-tracks-clock-svg path {
+    stroke: var(--text-muted);
+}
+
+
+.clocks-tracks-clock-svg circle[fill="currentColor"],
+.clocks-tracks-clock-svg path[fill="currentColor"] {
+    fill: var(--interactive-accent);
+}
