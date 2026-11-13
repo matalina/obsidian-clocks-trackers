@@ -1,4 +1,4 @@
-# Clocks & Trackers
+# Clocks and Trackers
 
 Click a box or circle to fill up to it; click the last filled one again to clear it.
 

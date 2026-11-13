@@ -1,4 +1,4 @@
-# Clocks & Trackers
+# Clocks and Trackers
 
 Clickable progress clocks, tick trackers and tallies for Obsidian, written as inline code:
 
@@ -21,7 +21,7 @@ The plugin isn't in the community plugin list yet. To install it by hand:
 
 1. Download `main.js`, `manifest.json` and `styles.css` from the [latest release](https://github.com/matalina/obsidian-clocks-trackers/releases).
 2. Put them in `<vault>/.obsidian/plugins/clocks-and-trackers/`.
-3. Turn on **Clocks & Trackers** in **Settings → Community plugins**.
+3. Turn on **Clocks and Trackers** in **Settings → Community plugins**.
 
 ## Syntax
 
