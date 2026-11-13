@@ -18,6 +18,8 @@ import { TrackWidget } from "./track";
 import { ClockWidget } from "./clock";
 import { TRACK_REGEX } from "../track";
 import { CLOCK_REGEX } from "../clock";
+import { TallyWidget } from "./tally";
+import { TALLY_REGEX } from "../tally";
 
 // Live preview mode inline elements
 class ClocksTrackersViewPlugin implements PluginValue {
@@ -92,6 +94,20 @@ class ClocksTrackersViewPlugin implements PluginValue {
                             to,
                             Decoration.replace({
                                 widget: new ClockWidget({
+                                    originalNode: node.node,
+                                    originalText: text,
+                                }),
+                            })
+                        );
+                    }
+
+                    // `tally:7/20`
+                    if (TALLY_REGEX.test(text)) {
+                        builder.add(
+                            from,
+                            to,
+                            Decoration.replace({
+                                widget: new TallyWidget({
                                     originalNode: node.node,
                                     originalText: text,
                                 }),

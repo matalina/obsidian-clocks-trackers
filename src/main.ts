@@ -1,6 +1,7 @@
 import { MarkdownPostProcessorContext, Plugin, TFile } from "obsidian";
 import { TrackWidget, TRACK_REGEX } from "./track";
 import { ClockWidget, CLOCK_REGEX } from "./clock";
+import { TallyWidget, TALLY_REGEX } from "./tally";
 import { clocksTrackersExtension } from "./live";
 
 export default class ClocksTrackersPlugin extends Plugin {
@@ -26,7 +27,7 @@ export default class ClocksTrackersPlugin extends Plugin {
 		const section = ctx.getSectionInfo(el);
 		const lineStart = section?.lineStart ?? 0;
 		const lineEnd = section?.lineEnd ?? 9999;
-		const indexMap = { track: 0, clock: 0 };
+		const indexMap = { track: 0, clock: 0, tally: 0 };
 
 		for (const node of nodeList) {
 			const innerText = node.innerText.trim();
@@ -54,6 +55,19 @@ export default class ClocksTrackersPlugin extends Plugin {
 					lineStart,
 					lineEnd,
 					index: indexMap.clock++,
+					originalText: mdText,
+				});
+				node.replaceWith(widget.toDOM());
+			}
+
+			// `tally:7/20`
+			if (TALLY_REGEX.test(mdText)) {
+				const widget = new TallyWidget({
+					app: this.app,
+					file,
+					lineStart,
+					lineEnd,
+					index: indexMap.tally++,
 					originalText: mdText,
 				});
 				node.replaceWith(widget.toDOM());
