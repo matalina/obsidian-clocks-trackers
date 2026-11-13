@@ -68,3 +68,42 @@
 .clocks-trackers-clock-svg path[fill="currentColor"] {
     fill: var(--interactive-accent);
 }
+
+.clocks-trackers-tally {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: bottom;
+}
+
+.clocks-trackers-tally-btn {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: auto;
+    color: var(--interactive-accent);
+    --icon-size: 22px;
+}
+
+/* Off and on marks share one grid cell, so a split group overlays exactly. */
+.clocks-trackers-tally-group {
+    display: inline-grid;
+}
+
+.clocks-trackers-tally-mark {
+    grid-area: 1 / 1;
+    display: inline-flex;
+}
+
+.clocks-trackers-tally-mark.is-on {
+    color: var(--interactive-accent);
+}
+
+.clocks-trackers-tally-mark.is-off {
+    color: var(--text-faint);
+}
