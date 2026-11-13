@@ -20,7 +20,7 @@ import { TRACK_REGEX } from "../track";
 import { CLOCK_REGEX } from "../clock";
 
 // Live preview mode inline elements
-class ClocksTracksViewPlugin implements PluginValue {
+class ClocksTrackersViewPlugin implements PluginValue {
     decorations: DecorationSet;
 
     constructor(view: EditorView) {
@@ -116,10 +116,10 @@ class ClocksTracksViewPlugin implements PluginValue {
     }
 }
 
-const pluginSpec: PluginSpec<ClocksTracksViewPlugin> = {
-    decorations: (value: ClocksTracksViewPlugin) => value.decorations,
+const pluginSpec: PluginSpec<ClocksTrackersViewPlugin> = {
+    decorations: (value: ClocksTrackersViewPlugin) => value.decorations,
 };
 
-export const clocksTracksExtension = () => {
-    return ViewPlugin.fromClass(ClocksTracksViewPlugin, pluginSpec);
+export const clocksTrackersExtension = () => {
+    return ViewPlugin.fromClass(ClocksTrackersViewPlugin, pluginSpec);
 };

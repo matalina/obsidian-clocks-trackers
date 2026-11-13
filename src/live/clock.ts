@@ -146,15 +146,15 @@ export class ClockWidget extends WidgetType {
 
     toDOM(view: EditorView): HTMLElement {
         this.el = activeDocument.createElement("span");
-        this.el.classList.add("clocks-tracks-clock");
+        this.el.classList.add("clocks-trackers-clock");
 
         this.btnEl = this.el.createEl("button");
-        this.btnEl.classList.add("clickable-icon", "clocks-tracks-clock-btn");
+        this.btnEl.classList.add("clickable-icon", "clocks-trackers-clock-btn");
 
         this.svgEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "svg");
         this.svgEl.setAttribute("width", this.size.toString());
         this.svgEl.setAttribute("height", this.size.toString());
-        this.svgEl.classList.add("clocks-tracks-clock-svg");
+        this.svgEl.classList.add("clocks-trackers-clock-svg");
         this.btnEl.appendChild(this.svgEl);
 
         this.generateSvg();

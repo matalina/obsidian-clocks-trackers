@@ -1,14 +1,14 @@
 import { MarkdownPostProcessorContext, Plugin, TFile } from "obsidian";
 import { TrackWidget, TRACK_REGEX } from "./track";
 import { ClockWidget, CLOCK_REGEX } from "./clock";
-import { clocksTracksExtension } from "./live";
+import { clocksTrackersExtension } from "./live";
 
-export default class ClocksTracksPlugin extends Plugin {
+export default class ClocksTrackersPlugin extends Plugin {
 	async onload() {
 		// Reading view
 		this.registerMarkdownPostProcessor(this.processTrackAndClock);
 		// Live Preview
-		this.registerEditorExtension(clocksTracksExtension());
+		this.registerEditorExtension(clocksTrackersExtension());
 	}
 
 	processTrackAndClock = (el: HTMLElement, ctx: MarkdownPostProcessorContext): void => {

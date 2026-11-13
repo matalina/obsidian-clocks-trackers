@@ -138,7 +138,7 @@ export class TrackWidget {
 
     toDOM(): HTMLElement {
         this.el = activeDocument.createElement("span");
-        this.el.classList.add("clocks-tracks-track");
+        this.el.classList.add("clocks-trackers-track");
 
         this.btnEls = [];
         for (let i = 0; i < this.max; i++) {
@@ -147,8 +147,8 @@ export class TrackWidget {
             btnEl.style.height = `${this.size}px`;
             btnEl.classList.add(
                 "clickable-icon",
-                "clocks-tracks-track-btn",
-                `clocks-tracks-track-${this.shape}`
+                "clocks-trackers-track-btn",
+                `clocks-trackers-track-${this.shape}`
             );
             btnEl.onclick = (event) => {
                 event.preventDefault();

@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-clocks-tracks",
+	"name": "obsidian-clocks-trackers",
 	"version": "0.1.0",
-	"description": "Clickable progress clocks and box/circle tick tracks for Obsidian",
+	"description": "Clickable progress clocks and box/circle tick trackers for Obsidian",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {

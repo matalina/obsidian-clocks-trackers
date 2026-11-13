@@ -1,4 +1,4 @@
-.clocks-tracks-track {
+.clocks-trackers-track {
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -8,7 +8,7 @@
     vertical-align: bottom;
 }
 
-.clocks-tracks-track-btn {
+.clocks-trackers-track-btn {
     display: inline-block;
     width: 22px;
     height: 22px;
@@ -21,20 +21,20 @@
     margin: 0;
 }
 
-.clocks-tracks-track-btn:hover {
+.clocks-trackers-track-btn:hover {
     border-color: var(--interactive-accent);
 }
 
-.clocks-tracks-track-btn.active {
+.clocks-trackers-track-btn.active {
     border-color: var(--interactive-accent);
     background-color: var(--interactive-accent);
 }
 
-.clocks-tracks-track-circles {
+.clocks-trackers-track-circles {
     border-radius: 50%;
 }
 
-.clocks-tracks-clock {
+.clocks-trackers-clock {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -43,7 +43,7 @@
     vertical-align: bottom;
 }
 
-.clocks-tracks-clock-btn {
+.clocks-trackers-clock-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -54,17 +54,17 @@
     border: none;
 }
 
-.clocks-tracks-clock-svg {
+.clocks-trackers-clock-svg {
     cursor: pointer;
 }
 
-.clocks-tracks-clock-svg circle,
-.clocks-tracks-clock-svg path {
+.clocks-trackers-clock-svg circle,
+.clocks-trackers-clock-svg path {
     stroke: var(--text-muted);
 }
 
 
-.clocks-tracks-clock-svg circle[fill="currentColor"],
-.clocks-tracks-clock-svg path[fill="currentColor"] {
+.clocks-trackers-clock-svg circle[fill="currentColor"],
+.clocks-trackers-clock-svg path[fill="currentColor"] {
     fill: var(--interactive-accent);
 }

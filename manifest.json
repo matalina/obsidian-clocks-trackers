@@ -1,9 +1,9 @@
 {
-	"id": "clocks-and-tracks",
-	"name": "Clocks & Tracks",
+	"id": "clocks-and-trackers",
+	"name": "Clocks & Trackers",
 	"version": "0.1.0",
 	"minAppVersion": "1.13.0",
-	"description": "Clickable progress clocks and box/circle tick tracks from inline code like `clocks:2/6` and `boxes:1/5`.",
+	"description": "Clickable progress clocks and box/circle tick trackers from inline code like `clocks:2/6` and `boxes:1/5`.",
 	"author": "Alicia Wilkerson",
 	"authorUrl": "https://github.com/matalina",
 	"isDesktopOnly": false
