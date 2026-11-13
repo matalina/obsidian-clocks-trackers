@@ -1,5 +1,5 @@
 {
-	"name": "obsidian-clocks-trackers",
+	"name": "clocks-trackers",
 	"version": "0.1.0",
 	"description": "Clickable progress clocks, tick trackers and tallies for Obsidian",
 	"main": "main.js",
