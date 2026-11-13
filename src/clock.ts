@@ -114,34 +114,31 @@ export class ClockWidget {
         const radius = center - 2;
 
         if (this.max <= 1) {
-            const circleEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const circleEl = this.svgEl.createSvg("circle");
             circleEl.setAttribute("cx", center.toString());
             circleEl.setAttribute("cy", center.toString());
             circleEl.setAttribute("r", radius.toString());
             circleEl.setAttribute("fill", this.value > 0 ? "currentColor" : "none");
             circleEl.setAttribute("stroke", "currentColor");
             circleEl.setAttribute("stroke-width", "1.25");
-            this.svgEl.appendChild(circleEl);
         } else {
             const step = 360 / this.max;
             for (let i = 0; i < this.max; i++) {
-                const pathEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "path");
+                const pathEl = this.svgEl.createSvg("path");
                 pathEl.setAttribute(
                     "d",
                     this.calculatePath(center, center, radius, i, step)
                 );
                 pathEl.setAttribute("fill", this.value > i ? "currentColor" : "none");
                 pathEl.setAttribute("stroke", "currentColor");
-                this.svgEl.appendChild(pathEl);
             }
-            const circleEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "circle");
+            const circleEl = this.svgEl.createSvg("circle");
             circleEl.setAttribute("cx", center.toString());
             circleEl.setAttribute("cy", center.toString());
             circleEl.setAttribute("r", radius.toString());
             circleEl.setAttribute("fill", "none");
             circleEl.setAttribute("stroke", "currentColor");
             circleEl.setAttribute("stroke-width", "1.25");
-            this.svgEl.appendChild(circleEl);
         }
     }
 
@@ -180,17 +177,16 @@ export class ClockWidget {
     }
 
     toDOM(): HTMLElement {
-        this.el = activeDocument.createElement("span");
+        this.el = createSpan();
         this.el.classList.add("clocks-trackers-clock");
 
         this.btnEl = this.el.createEl("button");
         this.btnEl.classList.add("clickable-icon", "clocks-trackers-clock-btn");
 
-        this.svgEl = activeDocument.createElementNS("http://www.w3.org/2000/svg", "svg");
+        this.svgEl = this.btnEl.createSvg("svg");
         this.svgEl.setAttribute("width", this.size.toString());
         this.svgEl.setAttribute("height", this.size.toString());
         this.svgEl.classList.add("clocks-trackers-clock-svg");
-        this.btnEl.appendChild(this.svgEl);
 
         this.generateSvg();
 

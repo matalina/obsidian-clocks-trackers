@@ -147,7 +147,7 @@ export class TallyWidget {
     }
 
     toDOM(): HTMLElement {
-        this.el = activeDocument.createElement("span");
+        this.el = createSpan();
         this.el.classList.add("clocks-trackers-tally");
 
         this.btnEl = this.el.createEl("button");

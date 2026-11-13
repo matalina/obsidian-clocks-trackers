@@ -137,7 +137,7 @@ export class TrackWidget {
     }
 
     toDOM(): HTMLElement {
-        this.el = activeDocument.createElement("span");
+        this.el = createSpan();
         this.el.classList.add("clocks-trackers-track");
 
         this.btnEls = [];

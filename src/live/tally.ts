@@ -35,7 +35,7 @@ export class TallyWidget extends WidgetType {
     }
 
     toDOM(view: EditorView): HTMLElement {
-        const el = activeDocument.createElement("span");
+        const el = createSpan();
         el.classList.add("clocks-trackers-tally");
 
         const btnEl = el.createEl("button");
