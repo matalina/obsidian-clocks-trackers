@@ -1,7 +1,7 @@
 {
 	"id": "clocks-and-trackers",
 	"name": "Clocks and Trackers",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"minAppVersion": "1.13.0",
 	"description": "Clickable progress clocks, box/circle tick trackers and tallies from inline code like `clocks:2/6`, `boxes:1/5` and `tally:7/20`.",
 	"author": "Alicia Wilkerson",
